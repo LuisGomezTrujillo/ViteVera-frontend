@@ -49,7 +49,7 @@ const Contacto = () => {
                 <input
                   type="email"
                   placeholder="tu@email.com"
-                  className="flex-1 p-2 rounded-lg text-gray-800"
+                  className="flex-1 p-2 rounded-lg text-gray-200"
                 />
                 <button className="px-4 py-2 bg-white text-morado-uva rounded-lg font-bold hover:bg-gray-100 transition-colors">
                   Suscribir
