@@ -9,7 +9,6 @@ export const NAVIGATION_ITEMS = [
   { name: 'Qué Hacemos', icon: Sprout, href: '#hacemos' },
   { name: 'Participa', icon: HandHeart, href: '#participa' },
   { name: 'Formación', icon: GraduationCap, href: '#formacion' },
-  { name: 'Historias', icon: Camera, href: '#historias' },
   { name: 'Investigación', icon: Lightbulb, href: '#investigacion' },
   { name: 'Casa Piloto', icon: Building, href: '#casa' },
   { name: 'Contacto', icon: Mail, href: '#contacto' }
