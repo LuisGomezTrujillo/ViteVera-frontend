@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Variables CSS para la nueva paleta */
+:root {
+ /* Colores de Vite Vera */
+  --color-morado-uva: #4B2354;
+  --color-verde-vid: #3E7A3F;
+  --color-verde-hoja: #78A75A;
+  --color-blanco-paz: #FFFFFF;
+  --color-beige-calido: #F5F1E6;
+  --color-gris-suave: #777777;
+}
+
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Open Sans', sans-serif;
+}
