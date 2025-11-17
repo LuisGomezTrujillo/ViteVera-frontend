@@ -1,20 +1,25 @@
-// src/components/ui/TestimonialCard.jsx
+// src/components/ui/WorkshopCard.jsx
 import React from 'react';
-import { Star } from 'lucide-react';
-import Card from './Card';
+import { Calendar } from 'lucide-react';
 
-const TestimonialCard = ({ texto, autor, rating = 5 }) => {
+const WorkshopCard = ({ fecha, titulo, duracion, onInscribir }) => {
   return (
-    <Card>
-      <div className="flex mb-4">
-        {[...Array(rating)].map((_, index) => (
-          <Star key={index} size={16} className="text-yellow-400 fill-current" />
-        ))}
+    <div className="bg-white p-4 rounded-lg hover:shadow-md transition-shadow">
+      <div className="flex items-start space-x-3 mb-2">
+        <Calendar size={20} className="text-morado-uva mt-1" />
+        <div className="flex-1">
+          <p className="font-semibold text-morado-uva">{titulo}</p>
+          <p className="text-sm text-gris-suave">{fecha} • {duracion}</p>
+        </div>
       </div>
-      <p className="text-gris-suave italic mb-4">"{texto}"</p>
-      <p className="font-semibold text-morado-uva">— {autor}</p>
-    </Card>
+      <button 
+        onClick={onInscribir}
+        className="w-full mt-2 py-2 bg-morado-uva text-white rounded-lg hover:opacity-90 transition-all"
+      >
+        Inscribirse
+      </button>
+    </div>
   );
 };
 
-export default TestimonialCard;
+export default WorkshopCard;

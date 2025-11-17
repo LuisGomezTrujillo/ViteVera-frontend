@@ -33,7 +33,7 @@ const CasaPiloto = () => {
                 <div key={fase.id} className="flex items-start space-x-3">
                   <ChevronRight 
                     size={20} 
-                    className={`mt-1 ${
+                    className={`mt-1 flex-shrink-0 ${
                       fase.estado === 'completada' || fase.estado === 'proceso' 
                         ? 'text-verde-vid' 
                         : 'text-gris-suave'

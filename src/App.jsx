@@ -10,6 +10,7 @@ import Participa from './components/sections/Participa';
 import Formacion from './components/sections/Formacion';
 import CasaPiloto from './components/sections/CasaPiloto';
 import Contacto from './components/sections/Contacto';
+import './index.css'  // Esta línea es crucial
 
 function App() {
   return (

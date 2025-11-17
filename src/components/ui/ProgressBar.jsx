@@ -1,20 +1,23 @@
-// src/components/ui/TestimonialCard.jsx
+// src/components/ui/ProgressBar.jsx
 import React from 'react';
-import { Star } from 'lucide-react';
-import Card from './Card';
 
-const TestimonialCard = ({ texto, autor, rating = 5 }) => {
+const ProgressBar = ({ value, label, showPercentage = true }) => {
   return (
-    <Card>
-      <div className="flex mb-4">
-        {[...Array(rating)].map((_, index) => (
-          <Star key={index} size={16} className="text-yellow-400 fill-current" />
-        ))}
+    <div className="mb-6">
+      {showPercentage && (
+        <div className="flex justify-between mb-2">
+          <span className="font-semibold text-morado-uva">{label}</span>
+          <span className="font-bold text-verde-vid">{value}%</span>
+        </div>
+      )}
+      <div className="w-full bg-gray-200 rounded-full h-4">
+        <div 
+          className="bg-gradient-to-r from-verde-vid to-verde-hoja h-4 rounded-full transition-all duration-500"
+          style={{ width: `${value}%` }}
+        ></div>
       </div>
-      <p className="text-gris-suave italic mb-4">"{texto}"</p>
-      <p className="font-semibold text-morado-uva">— {autor}</p>
-    </Card>
+    </div>
   );
 };
 
-export default TestimonialCard;
+export default ProgressBar;

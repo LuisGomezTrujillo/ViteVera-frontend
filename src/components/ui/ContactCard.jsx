@@ -1,20 +1,18 @@
-// src/components/ui/TestimonialCard.jsx
+// src/components/ui/ContactCard.jsx
 import React from 'react';
-import { Star } from 'lucide-react';
-import Card from './Card';
 
-const TestimonialCard = ({ texto, autor, rating = 5 }) => {
+const ContactCard = ({ icon: Icon, title, children }) => {
   return (
-    <Card>
-      <div className="flex mb-4">
-        {[...Array(rating)].map((_, index) => (
-          <Star key={index} size={16} className="text-yellow-400 fill-current" />
-        ))}
+    <div className="bg-beige-calido p-6 rounded-lg">
+      <div className="flex items-start space-x-4">
+        <Icon size={32} className="text-verde-vid flex-shrink-0" />
+        <div>
+          <h3 className="font-bold text-morado-uva mb-2">{title}</h3>
+          <div className="text-gris-suave">{children}</div>
+        </div>
       </div>
-      <p className="text-gris-suave italic mb-4">"{texto}"</p>
-      <p className="font-semibold text-morado-uva">— {autor}</p>
-    </Card>
+    </div>
   );
 };
 
-export default TestimonialCard;
+export default ContactCard;

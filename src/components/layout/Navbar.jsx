@@ -34,10 +34,10 @@ const Navbar = () => {
               <Sprout className="text-white" size={24} />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-morado-uva font-heading">
+              <h1 className="text-2xl font-bold text-verde-vid font-heading">
                 VITE VERA
               </h1>
-              <p className="text-xs text-gris-suave">Educa tu familia para la vida y la paz</p>
+              <p className="text-xs text-morado-uva">Educa tu familia para la vida y la paz</p>
             </div>
           </div>
 
@@ -93,92 +93,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import React, { useState, useEffect } from 'react';
-// import { Home, Heart, Book, Users, Lightbulb, Camera, Building, Mail, Menu, X, ChevronRight, Award, HandHeart, GraduationCap, Sprout } from 'lucide-react';
-
-// // Componente de Navegación
-// export const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 50);
-//     };
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   const navigation = [
-//     { name: 'Inicio', icon: Home, href: '#home' },
-//     { name: 'Nuestra Historia', icon: Heart, href: '#historia' },
-//     { name: 'Qué Hacemos', icon: Sprout, href: '#hacemos' },
-//     { name: 'Participa', icon: HandHeart, href: '#participa' },
-//     { name: 'Formación', icon: GraduationCap, href: '#formacion' },
-//     { name: 'Historias', icon: Camera, href: '#historias' },
-//     { name: 'Investigación', icon: Lightbulb, href: '#investigacion' },
-//     { name: 'Casa Piloto', icon: Building, href: '#casa' },
-//     { name: 'Contacto', icon: Mail, href: '#contacto' }
-//   ];
-
-//   return (
-//     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between items-center h-20">
-//           {/* Logo */}
-//           <div className="flex items-center space-x-3">
-//             <div className="w-12 h-12 bg-verde-vid rounded-full flex items-center justify-center">
-//               <Sprout className="text-white" size={24} />
-//             </div>
-//             <div>
-//               <h1 className="text-2xl font-bold text-morado-uva font-heading">
-//                 VITE VERA
-//               </h1>
-//               <p className="text-xs text-gris-suave">Educa tu familia para la vida y la paz</p>
-//             </div>
-//           </div>
-
-//           {/* Desktop Menu */}
-//           <div className="hidden lg:flex space-x-1">
-//             {navigation.map((item) => (
-//               <a
-//                 key={item.name}
-//                 href={item.href}
-//                 className="px-3 py-2 rounded-md text-sm font-medium text-morado-uva hover:bg-beige-calido transition-colors flex items-center space-x-1"
-//               >
-//                 <item.icon size={16} />
-//                 <span>{item.name}</span>
-//               </a>
-//             ))}
-//           </div>
-
-//           {/* Mobile menu button */}
-//           <button
-//             onClick={() => setIsOpen(!isOpen)}
-//             className="lg:hidden p-2 rounded-md text-morado-uva hover:bg-beige-calido"
-//           >
-//             {isOpen ? <X size={24} /> : <Menu size={24} />}
-//           </button>
-//         </div>
-
-//         {/* Mobile Menu */}
-//         {isOpen && (
-//           <div className="lg:hidden pb-4">
-//             {navigation.map((item) => (
-//               <a
-//                 key={item.name}
-//                 href={item.href}
-//                 onClick={() => setIsOpen(false)}
-//                 className="px-3 py-2 rounded-md text-base font-medium text-morado-uva hover:bg-beige-calido flex items-center space-x-2"
-//               >
-//                 <item.icon size={18} />
-//                 <span>{item.name}</span>
-//               </a>
-//             ))}
-//           </div>
-//         )}
-//       </div>
-//     </nav>
-//   );
-// };
