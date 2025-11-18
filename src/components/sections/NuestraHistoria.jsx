@@ -36,7 +36,13 @@ const NuestraHistoria = () => {
           
           <div className="bg-beige-calido p-8 rounded-lg">
             <div className="aspect-square bg-verde-vid rounded-lg flex items-center justify-center">
-              <Heart size={100} className="text-white opacity-20" />
+              {/* <Heart size={100} className="text-white opacity-20" /> */}
+              <img
+                  src="/formacion.jpg"
+                  
+                  className="aspect-square bg-verde-vid rounded-lg flex items-center justify-center"
+                  
+                />
             </div>
           </div>
         </div>
