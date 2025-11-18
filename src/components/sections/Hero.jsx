@@ -8,7 +8,7 @@ import { IMPACT_STATS } from '../../data/constants';
 const Hero = () => {
   // Configuración del carrusel
   const images = [
-    '/hero-ninos.jpeg',
+    '/hero-ninos.jpg',
     '/hero-ninos-2.jpg',
     '/hero-ninos-3.jpg'
   ];
@@ -19,7 +19,14 @@ const Hero = () => {
   // Configuración del overlay (puedes modificar estos valores)
   const overlayConfig = {
     color: 'rgb(79, 70, 229)', // Color del overlay (morado-uva)
-    opacity: 0.7 // Opacidad del overlay (0 a 1)
+    opacity: 0.2 // Opacidad del overlay (0 a 1)
+  };
+
+  // Configuración de posición y escala de imagen
+  const imageConfig = {
+    objectPosition: 'top center', // Posición: 'top', 'center', 'bottom', 'left', 'right', o combinaciones como 'top center'
+    scale: 1, // Escala de la imagen (1 = 100%, 1.2 = 120%, etc.)
+    height: '100vh' // Altura: '100vh' (pantalla completa), '80vh', '600px', etc.
   };
 
   // Auto-play del carrusel
@@ -49,30 +56,37 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: imageConfig.height }}>
       {/* Carrusel de imágenes de fondo */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full" style={{ height: imageConfig.height }}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full transition-opacity duration-1000 ${
               index === currentImage ? 'opacity-100' : 'opacity-0'
             }`}
+            style={{ height: imageConfig.height }}
           >
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
+              style={{
+                objectPosition: imageConfig.objectPosition,
+                transform: `scale(${imageConfig.scale})`,
+                transformOrigin: imageConfig.objectPosition
+              }}
             />
           </div>
         ))}
         
         {/* Overlay con color y opacidad personalizables */}
         <div 
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full"
           style={{
             backgroundColor: overlayConfig.color,
-            opacity: overlayConfig.opacity
+            opacity: overlayConfig.opacity,
+            height: imageConfig.height
           }}
         ></div>
       </div>
@@ -114,12 +128,12 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32">
         <div className="text-center">
           {/* Badge superior */}
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-white/30">
+          {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-white/30">
             <span className="text-white font-semibold">✨ Aprendizaje con amor</span>
-          </div>
+          </div> */}
 
           {/* Título principal */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 font-heading leading-tight drop-shadow-2xl">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 font-heading leading-tight drop-shadow-2xl">
             Educa tu familia para la vida y la paz
           </h1>
           
@@ -135,17 +149,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <button className="flex items-center gap-2 bg-white text-morado-uva px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+            {/* <button className="flex items-center gap-2 bg-white text-morado-uva px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
               <Heart size={20} />
               <span>Apadrina una familia</span>
             </button>
             <button className="flex items-center gap-2 bg-verde-vid text-white px-8 py-4 rounded-full font-semibold hover:bg-verde-vid/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
               <Users size={20} />
               <span>Participa ahora</span>
-            </button>
+            </button> */}
             <button className="flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold border-2 border-white/30 hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
               <HandHeart size={20} />
-              <span>Descubre cómo ayudar</span>
+              <span>Descubre cómo participar</span>
             </button>
           </div>
 
@@ -172,6 +186,181 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// // src/components/sections/Hero.jsx
+// import React, { useState, useEffect } from 'react';
+// import { Heart, Users, HandHeart, ChevronLeft, ChevronRight } from 'lucide-react';
+// import Button from '../ui/Button';
+// import ImpactCounter from '../ui/ImpactCounter';
+// import { IMPACT_STATS } from '../../data/constants';
+
+// const Hero = () => {
+//   // Configuración del carrusel
+//   const images = [
+//     '/hero-ninos.jpg',
+//     '/hero-ninos-2.jpg',
+//     '/hero-ninos-3.jpg'
+//   ];
+
+//   const [currentImage, setCurrentImage] = useState(0);
+//   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+//   // Configuración del overlay (puedes modificar estos valores)
+//   const overlayConfig = {
+//     color: 'rgb(79, 70, 229)', // Color del overlay (morado-uva)
+//     opacity: 0.3 // Opacidad del overlay (0 a 1)
+//   };
+
+//   // Auto-play del carrusel
+//   useEffect(() => {
+//     if (!isAutoPlaying) return;
+    
+//     const interval = setInterval(() => {
+//       setCurrentImage((prev) => (prev + 1) % images.length);
+//     }, 5000); // Cambia cada 5 segundos
+
+//     return () => clearInterval(interval);
+//   }, [isAutoPlaying, images.length]);
+
+//   const nextImage = () => {
+//     setCurrentImage((prev) => (prev + 1) % images.length);
+//     setIsAutoPlaying(false);
+//   };
+
+//   const prevImage = () => {
+//     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+//     setIsAutoPlaying(false);
+//   };
+
+//   const goToImage = (index) => {
+//     setCurrentImage(index);
+//     setIsAutoPlaying(false);
+//   };
+
+//   return (
+//     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+//       {/* Carrusel de imágenes de fondo */}
+//       <div className="absolute inset-0 w-full h-full">
+//         {images.map((image, index) => (
+//           <div
+//             key={index}
+//             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+//               index === currentImage ? 'opacity-100' : 'opacity-0'
+//             }`}
+//           >
+//             <img
+//               src={image}
+//               alt={`Slide ${index + 1}`}
+//               className="w-full h-full object-cover"
+//             />
+//           </div>
+//         ))}
+        
+//         {/* Overlay con color y opacidad personalizables */}
+//         <div 
+//           className="absolute inset-0 w-full h-full"
+//           style={{
+//             backgroundColor: overlayConfig.color,
+//             opacity: overlayConfig.opacity
+//           }}
+//         ></div>
+//       </div>
+
+//       {/* Controles del carrusel */}
+//       <button
+//         onClick={prevImage}
+//         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 group"
+//         aria-label="Imagen anterior"
+//       >
+//         <ChevronLeft className="text-white group-hover:scale-110 transition-transform" size={24} />
+//       </button>
+      
+//       <button
+//         onClick={nextImage}
+//         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 group"
+//         aria-label="Siguiente imagen"
+//       >
+//         <ChevronRight className="text-white group-hover:scale-110 transition-transform" size={24} />
+//       </button>
+
+//       {/* Indicadores de puntos */}
+//       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+//         {images.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => goToImage(index)}
+//             className={`w-3 h-3 rounded-full transition-all duration-300 ${
+//               index === currentImage 
+//                 ? 'bg-white w-8' 
+//                 : 'bg-white/50 hover:bg-white/75'
+//             }`}
+//             aria-label={`Ir a imagen ${index + 1}`}
+//           />
+//         ))}
+//       </div>
+
+//       {/* Contenido principal */}
+//       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32">
+//         <div className="text-center">
+//           {/* Badge superior */}
+//           {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-white/30">
+//             <span className="text-white font-semibold">✨ Aprendizaje con amor</span>
+//           </div> */}
+
+//           {/* Título principal */}
+//           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 font-heading leading-tight drop-shadow-2xl">
+//             Educa tu familia para la vida y la paz
+//           </h1>
+          
+//           {/* Subtítulo */}
+//           <p className="text-xl md:text-2xl text-white/95 mb-4 font-semibold drop-shadow-lg">
+//             Homeschooling + Método Montessori + Catequesis del Buen Pastor
+//           </p>
+          
+//           {/* Descripción */}
+//           <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
+//             Educación en casa aplicando la Pedagogía Científica del Método Montessori y la Catequesis del Buen Pastor; acompañados por una red de padres de familia de manera virtual y presencial.
+//           </p>
+
+//           {/* CTA Buttons */}
+//           <div className="flex flex-wrap justify-center gap-4 mb-16">
+//             <button className="flex items-center gap-2 bg-white text-morado-uva px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+//               <Heart size={20} />
+//               <span>Apadrina una familia</span>
+//             </button>
+//             <button className="flex items-center gap-2 bg-verde-vid text-white px-8 py-4 rounded-full font-semibold hover:bg-verde-vid/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+//               <Users size={20} />
+//               <span>Participa ahora</span>
+//             </button>
+//             <button className="flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold border-2 border-white/30 hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+//               <HandHeart size={20} />
+//               <span>Descubre cómo ayudar</span>
+//             </button>
+//           </div>
+
+//           {/* Impact Counters con fondo translúcido */}
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+//             {IMPACT_STATS.map((stat, index) => (
+//               <div 
+//                 key={index}
+//                 className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
+//               >
+//                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+//                   {stat.value}
+//                 </div>
+//                 <div className="text-white/90 font-medium">
+//                   {stat.label}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
 
 
 // // src/components/sections/Hero.jsx
