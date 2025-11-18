@@ -44,7 +44,7 @@ const Navbar = () => {
               className="h-12 sm:h-14 md:h-16 lg:h-16 w-auto object-contain"
             />
             {/* Slogan - Responsive */}
-            <p className="text-[1rem] sm:text-[0.1rem] md:text-xs lg:text-xs text-morado-uva font-medium mt-0.5 leading-tight">
+            <p className="text-[0.9rem] sm:text-[0.3rem] md:text-xs lg:text-xs text-morado-uva font-medium mt-0.5 leading-tight">
               Educa tu familia para la vida y la paz
             </p>
           </a>
