@@ -11,13 +11,13 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-morado-uva mb-6 font-heading">
-            Educación Montessori para todos
+            Educa tu familia para la vida y la paz
           </h1>
           <p className="text-xl md:text-2xl text-verde-vid mb-4">
-            Desde el corazón de las familias
+            Método Montessori - Catequesis del Buen Pastor
           </p>
           <p className="text-lg text-gris-suave max-w-3xl mx-auto mb-8">
-            Formamos, acompañamos y compartimos materiales para que cada niño aprenda con libertad, belleza y fe.
+            Educación en casa aplicando el la Pedagogía Científica del Método Montessori y la Catequesis del Buen Pastor; acompañados por una red de padres de familia de manera virtual y presencial.
           </p>
         </div>
 

@@ -5,8 +5,8 @@ import { CONTACT_INFO } from '../../data/constants';
 const Footer = () => {
   const quickLinks = [
     { name: 'Inicio', href: '#home' },
-    { name: 'Nuestra Historia', href: '#historia' },
-    { name: 'Participa', href: '#participa' },
+    { name: 'Historia', href: '#historia' },
+    { name: 'Red', href: '#participa' },
     { name: 'Contacto', href: '#contacto' }
   ];
 
@@ -16,14 +16,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-heading">
-              VITE VERA
-            </h3>
+            <img
+              src="/logo-vitevera-blanco.png"
+              className="h-16 sm:h-20 w-auto"
+            />
             <p className="text-beige-calido text-sm">
               Educa tu familia para la vida y la paz
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="font-bold mb-4">Enlaces Rápidos</h4>
@@ -37,7 +38,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h4 className="font-bold mb-4">Contacto</h4>
@@ -48,7 +49,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Bottom */}
         <div className="border-t border-beige-calido pt-8 text-center">
           <p className="text-beige-calido italic font-heading mb-4">

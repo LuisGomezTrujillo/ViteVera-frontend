@@ -5,29 +5,29 @@ import { Home, Heart, Book, Users, Lightbulb, Camera, Building, Mail, Graduation
 
 export const NAVIGATION_ITEMS = [
   { name: 'Inicio', icon: Home, href: '#home' },
-  { name: 'Nuestra Historia', icon: Heart, href: '#historia' },
-  { name: 'Qué Hacemos', icon: Sprout, href: '#hacemos' },
-  { name: 'Participa', icon: HandHeart, href: '#participa' },
+  { name: 'Historia', icon: Heart, href: '#historia' },
+  { name: 'Misión', icon: Sprout, href: '#hacemos' },
   { name: 'Formación', icon: GraduationCap, href: '#formacion' },
   { name: 'Investigación', icon: Lightbulb, href: '#investigacion' },
-  { name: 'Casa Piloto', icon: Building, href: '#casa' },
+  { name: 'Red', icon: HandHeart, href: '#participa' },
+  { name: 'Piloto', icon: Building, href: '#casa' },
   { name: 'Contacto', icon: Mail, href: '#contacto' }
 ];
 
 export const IMPACT_STATS = [
   {
-    value: '250+',
+    value: '3+',
     label: 'Familias acompañadas',
     color: 'morado-uva'
   },
   {
-    value: '500+',
-    label: 'Materiales entregados',
+    value: '5+',
+    label: 'Niños y Niñas en proceso de formación',
     color: 'verde-vid'
   },
   {
-    value: '50+',
-    label: 'Guías formadas',
+    value: '3+',
+    label: 'Guías con formación Montessori',
     color: 'verde-hoja'
   }
 ];
@@ -95,36 +95,36 @@ export const RECURSOS_FORMACION = [
 ];
 
 export const TALLERES = [
-  { fecha: '15 Feb 2025', titulo: 'Introducción a Montessori', duracion: '2 horas' },
-  { fecha: '22 Feb 2025', titulo: 'Materiales caseros', duracion: '3 horas' },
-  { fecha: '01 Mar 2025', titulo: 'Disciplina positiva', duracion: '2 horas' }
+  { fecha: '25 Nov 2025', titulo: 'Montessori en casa', duracion: '1 hora' },
+  { fecha: '9 Dic 2025', titulo: 'La mesa de la paz', duracion: '1 horas' }
+
 ];
 
 export const TESTIMONIOS = [
   {
     id: 1,
-    texto: 'Gracias a Vite Vera, mi hijo descubrió el amor por aprender. Los materiales y la formación transformaron nuestra familia.',
-    autor: 'Familia González'
+    texto: 'Gracias a lo aprendido, mi hija descubrió el amor por aprender. Los materiales y la formación transformaron nuestra familia.',
+    autor: 'Familia Uno'
   },
   {
     id: 2,
     texto: 'El acompañamiento que recibimos fue fundamental. Ahora entendemos mejor cómo guiar a nuestros hijos en su aprendizaje.',
-    autor: 'Familia Martínez'
+    autor: 'Familia Dos'
   },
   {
     id: 3,
     texto: 'Los talleres nos dieron herramientas prácticas. Hoy nuestra casa es un ambiente de paz y aprendizaje.',
-    autor: 'Familia Rodríguez'
+    autor: 'Familia Tres'
   }
 ];
 
 export const CONTACT_INFO = {
   ubicacion: {
-    ciudad: 'Manizales, Caldas',
+    ciudad: 'Villamaría, Caldas',
     pais: 'Colombia'
   },
-  email: 'info@vitevera.org',
-  telefono: '+57 312 345 6789'
+  email: 'casavitevera@gmail.com',
+  telefono: '+57 301 471 6399'
 };
 
 export const SOCIAL_LINKS = [
@@ -134,14 +134,14 @@ export const SOCIAL_LINKS = [
 ];
 
 export const CASA_PILOTO = {
-  progreso: 65,
-  metaTotal: 70000000,
-  recaudado: 45000000,
-  donantes: 120,
+  progreso: 0,
+  metaTotal: 0,
+  recaudado: 0,
+  donantes: 0,
   diasRestantes: 90,
   fases: [
-    { id: 1, nombre: 'Diseño arquitectónico y permisos', estado: 'completada' },
-    { id: 2, nombre: 'Construcción de estructura principal', estado: 'proceso' },
-    { id: 3, nombre: 'Acabados y equipamiento', estado: 'pendiente' }
+    { id: 1, nombre: 'Creación de contenido', estado: 'en proceso' },
+    { id: 2, nombre: 'Construcción de Material', estado: 'en proceso' },
+    { id: 3, nombre: 'Adecuación de los ambientes', estado: 'pendiente' }
   ]
 };

@@ -9,10 +9,10 @@ const Investigacion = () => {
     <section id="investigacion" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-morado-uva text-center mb-6 font-heading">
-          Investigación y Ciencia Montessori
+          Investigaciones en Pedagogía Científica
         </h2>
         <p className="text-xl text-center text-gris-suave mb-12 max-w-4xl mx-auto">
-          La pedagogía Montessori es, ante todo, una ciencia de la observación. En Vite Vera unimos la fe, la familia y la investigación para comprender cómo aprenden los niños en libertad.
+          Vite Vera quiere continuar con el legado de La Pedagogía Científica dejado por la Doctora María Montessori.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">

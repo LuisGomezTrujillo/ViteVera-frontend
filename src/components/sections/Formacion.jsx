@@ -62,7 +62,7 @@ const Formacion = () => {
 
         <div className="text-center mt-12">
           <button className="px-8 py-4 bg-verde-vid text-white rounded-lg font-bold text-lg hover:opacity-90 transition-all">
-            Ver Todos los Cursos y Diplomados
+            Ver Todas las Formaciones
           </button>
         </div>
       </div>

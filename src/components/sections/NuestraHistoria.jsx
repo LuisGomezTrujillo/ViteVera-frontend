@@ -14,10 +14,19 @@ const NuestraHistoria = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gris-suave leading-relaxed">
-              Todo comenzó con nuestros niños y niñas asistiendo a la Casa de las Hermanas de la Caridad de San Vicente de Paul en Villamaría Caldas; para recibir la Catequesis del Buen Pastor; Gracias a ellas y a ACOFOREC (Asociación Colombiana para la Formación Católica) nos capacitarnos como catequistas y Psicopedagogía Montessori. Desde entonces, más familias se han unido para compartir lo que tienen: tiempo, manos, corazón y la fe.
+              Todo comenzó con nuestros niños y niñas asistiendo a la Casa de las Hermanas de la Caridad de San Vicente de Paul en Villamaría Caldas para recibir la Catequesis del Buen Pastor. 
             </p>
             <p className="text-lg text-gris-suave leading-relaxed">
-              <strong className="text-verde-vid">Nuestra misión</strong> es que cada familia viva la experiencia de la Educación para la Vida y la Paz con el método Montessori y la Catequesis del Buen Pastor sin importar sus recursos.
+              Nos capacitamos en Psicopedagogía Montessori y Catequesis del Buen Pastor con ACOFOREC (Asociación Colombiana para la Formación Católica).
+            </p>
+            <p className="text-lg text-gris-suave leading-relaxed">
+              Nos estamos encontrando con más familias para compartir lo que tenemos: experiencia, manos, corazón y la fe.
+            </p>
+            <p className="text-lg text-gris-suave leading-relaxed">
+              Seguiremos capacitandonos y capacitando a padres, familiares y educadores que participan en la formación de los seres humanos que construirán la paz en Colombia y el mundo.
+            </p>
+            <p className="text-lg text-gris-suave leading-relaxed">
+              <strong className="text-verde-vid">Nuestra misión</strong> es superar los obstáculos que impiden que las familias vivan la experiencia de la Educación para la Vida y la Paz con el método Montessori y la Catequesis del Buen Pastor.
             </p>
             <Button variant="secondary">
               <Users size={20} />

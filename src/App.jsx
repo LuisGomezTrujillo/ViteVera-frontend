@@ -20,9 +20,9 @@ function App() {
         <Hero />
         <NuestraHistoria />
         <QueHacemos />
-        <Participa />
-        <Formacion />
+        <Formacion />        
         <Investigacion />
+        <Participa />
         <CasaPiloto />
         <Contacto />
       </main>

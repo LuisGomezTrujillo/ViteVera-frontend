@@ -18,7 +18,7 @@ const Participa = () => {
     <section id="participa" className="py-20 bg-gradient-to-br from-beige-calido to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-morado-uva text-center mb-6 font-heading">
-          Participa y Apoya
+          Únete a la Red
         </h2>
         <p className="text-xl text-center text-gris-suave mb-12 max-w-3xl mx-auto">
           Tú puedes ser parte de esta historia. Con una pequeña acción, ayudas a formar a un padre, equipar a una familia o abrir una puerta de aprendizaje.
